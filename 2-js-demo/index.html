@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div>xingha </div>
+    <p>文字一</p>
+    <p>文字二</p>
+    <p>文字三</p>
 </body>
-<script src="./deepClone.js"></script>
+
+<!-- <script src="./deepClone.js"></script> -->
+<!-- <script src="./class-demo.js"></script> -->
+<script src="./jquery-demo.js"></script>
+<script>
+    const $p = new jQuery('p')
+    console.log($p)
+    $p.get(1)
+    $p.each((item) => console.log(item.nodeName))
+    $p.on('click', (e) => console.log('click'))
+
+</script>
+
 </html>
