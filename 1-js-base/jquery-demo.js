@@ -8,7 +8,6 @@ class jQuery {
         this.length = length
         this.selector = selector
     }
-
     get(index) {
         return this[index]
     }
