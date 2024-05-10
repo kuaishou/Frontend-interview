@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <script src="./array-rotate.js"></script>
+    <!-- <script src="./array-rotate.js"></script> -->
+    <script src="./match-bracket.js"></script>
+
+    <script>
+        //栈：先进后出的数据结构；可以用数组表示栈
+        const arr = [1, 2, 3]
+        arr.push(4)
+        arr.pop()
+
+        //队列；先进先出的数据结构；可以用数组表示队列；
+        //但是数组使用shift出队有点耗时，因为数组第一个变化的时候后面的数据都变化了
+        const queue = []
+        queue.push(100)
+        queue.push(200)//入队，出队
+        queue.shift()//数组最前面出队
+
+
+    </script>
 </body>
+
 </html>
