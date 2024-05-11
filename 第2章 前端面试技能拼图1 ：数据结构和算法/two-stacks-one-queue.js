@@ -1,7 +1,7 @@
 
 //用两个栈实现一个队列[4]
 class MyQueue {
-    constructor(stack1, stack2) {
+    constructor() {
         this.stack1 = []
         this.stack2 = []
     }
