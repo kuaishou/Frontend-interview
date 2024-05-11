@@ -35,10 +35,6 @@ class MyQueue {
     get length() {
         return this.len
     }
-
-
-
-
 }
 
 const mystack = new MyQueue()
@@ -51,5 +47,44 @@ console.log('length1', mystack.length)
 console.log('delete', mystack.delete())
 console.log('length2', mystack.length)
 console.log('myQueue', mystack)
+
+//性能测试链表和数组实现队列那个性能更好
+//链表实现队列性能测试
+const q1 = new MyQueue()
+
+console.time('queue')
+for (let i = 0; i < 100000; i++) {
+    q1.add(i)//入队
+}
+for (let i = 0; i < 100000; i++) {
+    q1.delete()//出队
+}
+console.timeEnd('queue')
+//耗时---14ms
+
+
+
+//数组实现队列性能测试
+const q2 = []
+
+console.time('Array')
+for (let i = 0; i < 100000; i++) {
+    q2.push(i)//入队
+}
+for (let i = 0; i < 100000; i++) {
+    q2.shift()//出队
+}
+console.timeEnd('Array')
+
+//耗时---500ms
+
+//所以链表实现队列性能更好
+
+
+
+
+
+
+
 
 
