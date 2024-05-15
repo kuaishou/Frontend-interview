@@ -59,5 +59,26 @@ function findTwoNumber1(arr, n) {
     return res
 }
 
-
 console.log('findTwoNumber1', findTwoNumber1(nArr, 14))
+
+
+//双for循环性能测试
+console.time('findTwoNumber')
+for (let i = 0; i < 100000; i++) {
+    findTwoNumber(nArr, 14)
+}
+console.timeEnd('findTwoNumber')
+//耗时---8ms
+
+
+
+//双指针性能测试
+const q2 = []
+
+console.time('findTwoNumber1')
+for (let i = 0; i < 100000; i++) {
+    findTwoNumber1(nArr, 14)
+}
+console.timeEnd('findTwoNumber1')
+
+//耗时---4ms

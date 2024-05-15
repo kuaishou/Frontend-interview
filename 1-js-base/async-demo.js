@@ -1,5 +1,5 @@
 //异步
-console.log(100)
+console.log(100).alert.
 setTimeout(()=>{
     console.log(200)
 },1000)

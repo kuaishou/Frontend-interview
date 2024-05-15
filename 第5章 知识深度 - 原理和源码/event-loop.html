@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //事件循环
+        console.log('start')//最快
+        setTimeout(() => {//最后。DOm渲染在settimeout之前
+            console.log('timeout')
+        })
+        //
+        Promise.resolve().then(() => {//第二快
+            console.log('paromise')
+        })
+        console.log('end')
+
+
+    </script>
+</body>
+
+</html>
