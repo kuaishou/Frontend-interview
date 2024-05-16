@@ -1,7 +1,9 @@
+const arr = []
 //二叉树的前序遍历
 function preOrderTraverse(node) {//根左右
     if (node === null) return
-    console.log(node.value)
+    arr.push(node.value)
+    // console.log(node.value)
     preOrderTraverse(node.left)
     preOrderTraverse(node.right)
 }
@@ -10,8 +12,10 @@ function inOrderTraverse(node) {//左根右
     if (node === null) return
 
     inOrderTraverse(node.left)
-    console.log(node.value)
+    arr.push(node.value)
+    // console.log(node.value)
     inOrderTraverse(node.right)
+
 }
 //二叉树的后序遍历
 function postOrderTraverse(node) {//左右根
@@ -19,7 +23,8 @@ function postOrderTraverse(node) {//左右根
 
     postOrderTraverse(node.left)
     postOrderTraverse(node.right)
-    console.log(node.value)
+    arr.push(node.value)
+    // console.log(node.value)
 }
 
 
@@ -53,6 +58,17 @@ const tree = {
     }
 }
 
-preOrderTraverse(tree)
-inOrderTraverse(tree)
-postOrderTraverse(tree)
+// preOrderTraverse(tree)
+// inOrderTraverse(tree)
+// postOrderTraverse(tree)
+
+
+// 寻找bst里面的第K小值
+  
+function getKthValue(node, k) {
+    inOrderTraverse(node)
+    console.log(arr)
+    return arr[k - 1] || null
+}
+
+console.log('k value',getKthValue(tree,3))    
