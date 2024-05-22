@@ -10,9 +10,7 @@ Function.prototype.myBind = function (context, ...bindargs) {
 
     //返回一个函数
     return function (...args) {
-        console.log(context, bindargs, args)
         const newArgs = bindargs.concat(args)
-        console.log('newArgs', newArgs)
         return self.apply(context, newArgs)
     }
 
